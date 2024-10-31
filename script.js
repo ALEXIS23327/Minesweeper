@@ -3,11 +3,11 @@ let board, minePositions;
 let gameOver = false;
 let firstClick = true;
 const modes = {
-    easy: { rows: 5, cols: 5, mines: 9 },
-    medium: { rows: 8, cols: 8, mines: 20 },
-    hard: { rows: 10, cols: 12, mines: 45 },
-    hardcore: { rows: 12, cols: 15, mines: 65 },
-    legend: { rows: 14, cols: 17, mines: 150 }
+    easy: { rows: 5, cols: 5, mines: 5 },
+    medium: { rows: 8, cols: 8, mines: 15 },
+    hard: { rows: 10, cols: 12, mines: 25 },
+    hardcore: { rows: 12, cols: 15, mines: 50 },
+    legend: { rows: 14, cols: 17, mines: 110 }
 };
 function resetGame() {
     document.getElementById('game').innerHTML = '';
