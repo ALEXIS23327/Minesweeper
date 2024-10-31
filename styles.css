@@ -1,0 +1,134 @@
+body {
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom right, #2c3e50, #bdc3c7);
+    color: #fff;
+    height: 100vh;
+    justify-content: center;
+}
+
+header {
+    text-align: center;
+    padding: 50px;
+}
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+header button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    background-color: #3498db;
+    color: white;
+    transition: background-color 0.3s, transform 0.3s;
+}
+header button:hover {
+    background-color: #464748;
+    transform: scale(1.05);
+}
+
+#settings {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 40px;
+    margin: 40px;
+    width: 80%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.difficulty-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+.difficulty-card {
+    width: 250px;
+    height: 160px;
+    background-color: #3498db;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+}
+.difficulty-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.difficulty-card:hover {
+    transform: scale(1.05);
+    background-color: #2980b9;
+}
+
+.difficulty-card:nth-child(1) { background-color: #3498db; } 
+.difficulty-card:nth-child(2) { background-color: #2ecc71; } 
+.difficulty-card:nth-child(3) { background-color: #e67e22; } 
+.difficulty-card:nth-child(4) { background-color: #e74c3c; } 
+.difficulty-card:nth-child(5) { background-color: #9b59b6; } 
+
+#custom-settings {
+    display: none;
+    justify-content: center;
+    gap: 20px;
+}
+
+#start-button {
+    background-color: #2e2e2e;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+#start-button:hover {
+    background-color: #4b4a49;
+}
+
+#game {
+    display: grid;
+    gap: 5px;
+    margin: 20px;
+}
+.cell {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    background-color: #95a5a6;
+    color: #2c3e50;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 3px;
+}
+.cell.mine {
+    background-color: #ecf0f1;
+}
+.cell.flagged {
+    background-color: #ecf0f1;
+}
+.cell.open {
+    background-color: #ecf0f1;
+}
+

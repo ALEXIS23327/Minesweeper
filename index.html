@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscaminas</title>
+ <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Buscaminas</h1>
+   <button onclick="startGame()">Iniciar Juego</button>
+   <button onclick="resetGame()">Reiniciar Juego</button>
+        <p id="message"></p>
+    </header>
+    <div id="settings">
+    <h2>Selecciona la dificultad</h2>
+    <div class="difficulty-options">
+        <div class="difficulty-card" onclick="updateSettings('easy')">Easy<br>5x5</div>
+        <div class="difficulty-card" onclick="updateSettings('medium')">Medium<br>8x8</div>
+        <div class="difficulty-card" onclick="updateSettings('hard')">Difficult<br>10x12</div>
+        <div class="difficulty-card" onclick="updateSettings('hardcore')">Hadcore<br>12x15</div>
+        <div class="difficulty-card" onclick="updateSettings('legend')">Legend<br>14x17</div>
+        <div class="difficulty-card" onclick="updateSettings('custom')">Custom</div>
+    </div>
+        <div id="custom-settings">
+            <label for="rows">Filas:</label>
+            <input type="number" id="rows" value="5" min="5" max="30">
+            <label for="cols">Columnas:</label>
+            <input type="number" id="cols" value="5" min="5" max="30">
+            <label for="mines">Minas:</label>
+            <input type="number" id="mines" value="10" min="1">
+            <button id="start-button" onclick="startGame()">Iniciar Juego</button>
+        </div>
+    </div>
+    <div id="game"></div>
+    <script src="script.js"></script>
+</body>
+</html>
